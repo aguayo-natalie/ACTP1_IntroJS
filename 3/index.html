@@ -13,7 +13,11 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ejercicio 3</title>
+    <style>
+      .red {color:red;}
+      #row-3 {transition: 1s;}
+    </style>
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -62,5 +66,46 @@
 
       </fieldset>
     </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $("h1").addClass("red");
+     
+      $(".section-1").css("background-color", "yellow");
+      
+      suma = $(".counter").text();
+      suma = parseInt(suma);
+      $(".counter").text(suma + 10);
+      /* Otra opción:
+      function suma() {
+      var numero = parseInt($(".counter").text());
+      var resultado = numero + 10;
+      $(".counter").text(resultado);
+      };
+      */
+
+      $("#row-3").css({"background-color":"grey", "transition":"1s"});
+      /* Otra opción:
+      $("#row-3").on("click", function(event){
+        $(this).toggleClass("grey");
+      })
+      */
+
+      /*camelCase si son dos palabras van juntas y la segunda 
+      comienza con mayuscula Ej: backgroundColor*/
+
+      $("section > h1").css("font-size", "2em");
+      /* Otra opción:
+      $(".section-1 h1").css("font-size", "2em");
+      */
+
+      $("tr:last").css("background-color", "red");
+      /* Otra opción:
+      $("tr:last-child").css("background-color", "red");
+      */
+    </script>
   </body>
 </html>
+
+
